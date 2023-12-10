@@ -9,14 +9,15 @@
         &::before {
             content: "";
             display: block;
-            width: 465px;
-            height: 112px;
+            width: 24vw;
+            max-width: 465px;
+            height: 100%;
             background-color: variables.$color-bg;
 
             position: absolute;
             transform: rotate(-2deg);
             z-index: -1;
-            right: 48px;
+            left: -6px;
         }
     }
 
@@ -24,14 +25,16 @@
         &::before {
             content: "";
             display: block;
-            width: 496px;
-            height: 118px;
+            width: 25.8vw;
+            max-width: 496px;
+            height: 100%;
             background-color: variables.$color-yellow;
-            
+
             position: absolute;
             transform: rotate(-2deg);
             z-index: -1;
-            right: 6px;
+            left: -10px;
+
         }
     }
 }

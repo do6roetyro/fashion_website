@@ -1,0 +1,6 @@
+section.collaboration
+    h2.visually-hidden Brands Assortiment 
+    .collaboration__wrapper.wrapper
+        ul.collaboration__list.list
+            each name in ['hm', 'obey', 'shopify', 'lacoste', 'levis', 'amazon']
+              li.collaboration__item(class=`collaboration__item--${name}`): span.visually-hidden #{name}

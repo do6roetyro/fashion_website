@@ -1,0 +1,44 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.collaboration {
+    background-color: variables.$color-yellow;
+    margin-bottom: 69px;
+}
+
+.collaboration__list{
+    display: flex;
+    gap: 121px;
+    align-items: center;
+
+    padding-top: 62px;
+    padding-bottom: 55px;
+}
+
+.collaboration__item {
+    
+    &--hm {
+        @include mixins.pseudo("../icons/h&m.svg", 118px, 69px);
+       
+    }
+
+    &--obey {
+        @include mixins.pseudo("../icons/obey.svg", 150px, 52.6px);  
+    }
+
+    &--shopify {
+        @include mixins.pseudo("../icons/shopify.svg", 176px, 62px);  
+    }
+
+    &--lacoste {
+        @include mixins.pseudo("../icons/lacoste.svg", 235px, 70px);  
+    }
+
+    &--levis {
+        @include mixins.pseudo("../icons/levis.svg", 235px, 70px);  
+    }
+
+    &--amazon {
+        @include mixins.pseudo("../icons/amazon.svg", 235px, 70px);  
+    }
+}

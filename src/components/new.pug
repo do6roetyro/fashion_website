@@ -1,0 +1,14 @@
+section.new.wrapper
+    h2.new__title new arrivals
+    ul.new__list.list
+      each link in ['Hoodies', 'Coats', 'T-shirts']
+        li.new__item
+          a.new__link.link.new-link(href=`#${link.toLowerCase()}`)
+            div.new-link__image
+              img(src='путь_к_изображению', alt=`Alt текст изображения`)
+            div.new-link__description
+              .new-link__text
+                h3 Заголовок
+                span Дополнительный текст
+              button.button.new-link__button(type="button")
+

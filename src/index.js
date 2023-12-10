@@ -7,8 +7,10 @@ import "./styles/button.scss";
 // -- header
 import "./styles/main-nav.scss";
 // -- main
+import "./styles/main-container.scss";
 import "./styles/hero.scss";
 import "./styles/hero-title.scss";
+import "./styles/collaboration.scss";
 // --footer
 
 
