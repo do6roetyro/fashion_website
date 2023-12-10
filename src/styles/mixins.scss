@@ -1,0 +1,16 @@
+@mixin absolute-center {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+@mixin pseudo($url, $width, $height) {
+  content: "";
+  display: block;
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: $width;
+  height: $height;
+  flex-shrink: 0;
+}

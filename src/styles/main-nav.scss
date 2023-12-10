@@ -1,0 +1,89 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+    text-transform: uppercase;
+}
+
+.main-nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.9px;
+
+    &::before {
+        @include mixins.pseudo("../icons/header_logo.svg", 32px, 29px);
+    }
+
+    &:hover {
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+
+    &:active {
+        opacity: 0.4;
+        transition: opacity 0.2s;
+    }
+}
+
+.main-nav__container {
+    display: flex;
+    gap: 54px;
+}
+
+.main-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.22px;
+}
+
+.main-nav__item {
+    height: 100%;
+    
+}
+
+.main-nav__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+
+    &:active {
+        opacity: 0.4;
+        transition: opacity 0.2s;
+    }
+}
+
+.main-nav__button {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+
+    padding: 17px 22px;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+
+    
+}

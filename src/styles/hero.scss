@@ -1,0 +1,70 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.hero__container {
+    &--main {
+        background-color: #f4f6f5;
+        border-radius: 59px;
+
+        display: flex;
+        gap: 43px;
+    }
+
+    &--description {
+        padding-top: 77px;
+        padding-left: 120px;
+    }
+
+    &--image {
+        padding-top: 69px;
+        padding-right: 81px;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &--button {
+        position: relative;
+
+        &::before {
+            @include mixins.pseudo("../icons/hero_yellow_vector.svg", 190px, 32px);
+            position: absolute;
+            top: 22px;
+        }
+    }
+}
+
+.hero__title {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 120px;
+    text-transform: uppercase;
+
+    position: relative;
+    z-index: 1;
+
+    padding-bottom: 40px;
+
+    width: 474px;
+}
+
+.hero__description {
+    color: #191818;
+    font-size: 2rem;
+    letter-spacing: -1.6px;
+
+    padding-bottom: 32px;
+}
+
+.hero__button {
+    font-size: 30px;
+    letter-spacing: -1.5px;
+
+    display: block;
+    border-radius: 10px;
+
+    position: relative;
+    padding: 18px 40px;
+    margin-left: auto;
+    margin-right: 130px;
+}

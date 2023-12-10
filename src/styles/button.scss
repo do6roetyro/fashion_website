@@ -1,0 +1,27 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.button {
+    border: none;
+    cursor: pointer;
+    font-family: variables.$font;
+
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+
+}
+
+.button--black {
+    color: #fefefe;
+    background: #000000;
+
+    &:active {
+        color: #000000;
+        background: transparent;
+        transition: all 0.2s;
+        opacity: 1;
+    }
+}

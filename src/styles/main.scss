@@ -1,19 +1,58 @@
-// $font-size: 1rem;
-// $font-color: lch(28 99 35);
+@use "variables.scss";
+@use "mixins.scss";
 
-// html {
-//   font-size: $font-size;
-//   color: $font-color;
-//   font-family: 'Roboto';
-// }
+body {
+    margin: 0;
+}
 
-// .logo1 {
-//   width: 10em;
-// }
-// .logo2 {
-//   width: 10em;
-// }
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
 
-// .h1 {
-//   color: red;
-// }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,span {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.wrapper {
+  padding: 0 100px;
+  margin: 0 auto;
+  text-align: start;
+  max-width: 1920px;
+}

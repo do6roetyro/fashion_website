@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+
 
 module.exports = {
   mode: "development", // или 'production'
@@ -10,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.[contenthash].js",
-    assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
+    assetModuleFilename: "images/[name].[contenthash][ext]",
   },
   module: {
     rules: [
@@ -42,17 +44,28 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "images/[name].[contenthash][ext]",
+        },
       },
       {
         test: /\.svg$/,
         type: "asset/resource",
         generator: {
-          filename: path.join("icons", "[name].[contenthash][ext]"),
+          filename: "icons/[name].[contenthash][ext]",
         },
       },
     ],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src/images'),
+          to: path.join(__dirname, 'dist/images')
+        }
+      ]
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.pug"), // ваш шаблон HTML
       filename: "index.html",
