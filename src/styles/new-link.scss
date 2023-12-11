@@ -1,0 +1,59 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.new-link__image {
+    padding-bottom: 28px;
+    transition: transform 0.2s ease-in-out;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.03);
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1);
+            z-index: 1;
+        }
+    }
+}
+
+.new-link__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new-link__title {
+    color: #191919;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: -1.28px;
+
+    padding-bottom: 7px;
+
+    transition: transform ease-in-out;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.03);
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1);
+            z-index: 1;
+        }
+    }
+}
+
+.new-link__description {
+    color: #7f7f7f;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: -0.96px;
+}

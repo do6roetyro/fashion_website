@@ -5,9 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: clamp(320px, 100%, 1920px);
-
     padding-top: 3rem;
     padding-bottom: 4rem;
 
@@ -28,14 +26,16 @@
         @include mixins.pseudo("../icons/header_logo.svg", 32px, 29px);
     }
 
-    &:hover {
-        opacity: 0.7;
-        transition: opacity 0.2s;
-    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
 
-    &:active {
-        opacity: 0.4;
-        transition: opacity 0.2s;
+        &:active {
+            opacity: 0.4;
+            transition: opacity 0.2s;
+        }
     }
 }
 
@@ -56,7 +56,6 @@
 
 .main-nav__item {
     height: 100%;
-    
 }
 
 .main-nav__link {
@@ -64,14 +63,16 @@
     display: flex;
     align-items: center;
 
-    &:hover {
-        opacity: 0.7;
-        transition: opacity 0.2s;
-    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
 
-    &:active {
-        opacity: 0.4;
-        transition: opacity 0.2s;
+        &:active {
+            opacity: 0.4;
+            transition: opacity 0.2s;
+        }
     }
 }
 
@@ -86,6 +87,4 @@
     font-size: 1.5rem;
     letter-spacing: -0.72px;
     text-transform: uppercase;
-
-    
 }

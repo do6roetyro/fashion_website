@@ -6,22 +6,38 @@
     cursor: pointer;
     font-family: variables.$font;
 
-    &:hover {
-        opacity: 0.8;
-        transition: opacity 0.2s;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
     }
-
-
 }
 
 .button--black {
     color: #fefefe;
     background: #000000;
 
-    &:active {
-        color: #000000;
-        background: transparent;
-        transition: all 0.2s;
-        opacity: 1;
+    @media (hover: hover) and (pointer: fine) {
+        &:active {
+            color: #000000;
+            background: transparent;
+            transition: all 0.2s;
+            opacity: 1;
+        }
+    }
+}
+
+.button--arrow {
+    background: transparent;
+    @include mixins.pseudo("../icons/arrow.svg", 32px, 24px);
+    z-index: 1;
+
+    @media (hover: hover) and (pointer: fine) {
+        transition: transform 0.1s ease-in-out;
+
+        &:active {
+            transform: scale(1.1);
+        }
     }
 }
