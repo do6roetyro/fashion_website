@@ -1,0 +1,32 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.favourite__title {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: clamp(1.5rem, 4vw, 50px); /* 104.167% */
+    letter-spacing: 2.88px;
+    z-index: 1;
+
+    position: relative;
+    width: fit-content;
+
+    margin-bottom: 118px;
+
+    &::before {
+        @include mixins.pseudo("../icons/new_yellow_vector.svg", 186px, 35px);
+
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: -10px;
+    }
+}
+
+.favourite__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-bottom: 109px;
+}

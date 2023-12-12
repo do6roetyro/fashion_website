@@ -1,0 +1,21 @@
+section.favourite
+    .favourite__wrapper.wrapper
+        h2.favourite__title Young’s Favourite
+        ul.favourite__list.list
+          each link, index in ['Trending', 'sale']
+            li.favourite__item
+              - let imgPath = ['../images/favourite_1.jpg', '../images/favourite_2.jpg'];
+              - let imgAlt = ['Trending on instagram', 'All Under $40'];
+              - let title = ['Trending on instagram', 'All Under $40'];
+      
+              a.favourite__link.link.favourite-link(href=`#${link.toLowerCase()}`)
+      
+                .favourite-link__image
+                  img(src=imgPath[index], alt=imgAlt[index])
+      
+                .favourite-link__container
+                  .favourite-link__container-inner
+                    h3.favourite-link__title= title[index]
+                    span.favourite-link__description Explore Now!
+      
+                  button.favourite-link__button.button.button--arrow(type="button") 

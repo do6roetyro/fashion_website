@@ -1,0 +1,24 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.download-container {
+    display: flex;
+}
+
+.download-container__subject {
+    flex-basis: 50%;
+}
+
+.download-container__image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.download-container__links {
+    padding-bottom: 41px;
+    display: flex;
+    gap: 19px;
+}

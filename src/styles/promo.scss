@@ -2,25 +2,132 @@
 @use "mixins.scss";
 
 .promo {
-    background: linear-gradient(1deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%, #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%);
+    background: linear-gradient(
+        1deg,
+        #e0c340 0.13%,
+        #dfc23e 3.97%,
+        #e1c441 7.2%,
+        #e3c743 10.13%,
+        #e4c542 12.98%,
+        #e6c744 15.99%,
+        #e7c845 19.52%,
+        #e5c643 23.96%,
+        #e6c945 30.43%,
+        #e3c743 36.49%,
+        #e9ca48 42.49%,
+        #edce49 49.35%,
+        #f0d44c 55.42%,
+        #f4d84f 61.43%,
+        #f6da52 65.74%,
+        #f7db53 72.23%,
+        #f9dd55 77.43%,
+        #f9df56 83.84%,
+        #fae157 91.52%,
+        #f9df56 97.87%
+    );
 }
 
 .promo__container {
     width: clamp(320px, 100%, 1920px);
 
     margin: 0 auto;
+    margin-bottom: 190px;
 
     display: flex;
 }
 
 .promo__image-container {
     flex-basis: calc((991 / 1920) * 100vw);
+    position: relative;
 }
 
 .promo__subject-container {
     flex-basis: calc((933 / 1920) * 100vw);
+    padding: 128px 200px 55px 67px;
 }
 
 .promo__image {
     object-position: 2px;
+}
+
+.promo__title {
+    font-size: 111.6px;
+    font-weight: 900;
+    line-height: 137px;
+    text-transform: uppercase;
+
+    padding-bottom: 33px;
+}
+
+.promo__description {
+    color: #231300;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: -0.7px;
+
+    padding-bottom: 41px;
+}
+
+.promo__period {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.7px;
+}
+
+.promo__asterisk {
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: -0.7px;
+
+    padding-bottom: 51px;
+}
+
+.promo__link {
+    color: variables.$color-bg;
+    font-family: variables.$font;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+
+    padding: 26px 51px;
+    border-radius: 8.14px;
+    width: fit-content;
+}
+
+.promo__star-1 {
+    width: 76px;
+    height: 76px;
+    transform: rotate(-27deg);
+    left: 136px;
+    top: 152px;
+}
+
+.promo__star-2 {
+    width: 76px;
+    height: 76px;
+    transform: rotate(-27deg);
+    left: 187px;
+    top: 490px;
+}
+
+.promo__star-3 {
+    width: 76px;
+    height: 76px;
+    transform: rotate(-27deg);
+    right: 123px;
+    top: 83px;
+}
+
+.promo__star-4 {
+    width: 76px;
+    height: 76px;
+    transform: rotate(-27deg);
+    right: 72px;
+    bottom: 226px;
 }

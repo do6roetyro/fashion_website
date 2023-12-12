@@ -32,7 +32,14 @@ ol {
     margin: 0;
 }
 
-h1,h2,h3,h4,h5,h6,p,span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
     margin: 0;
     padding: 0;
 }
@@ -51,8 +58,22 @@ h1,h2,h3,h4,h5,h6,p,span {
 }
 
 .wrapper {
-  padding: 0 100px;
-  margin: 0 auto;
-  text-align: start;
-  max-width: 1920px;
+    padding: 0 100px;
+    margin: 0 auto;
+    text-align: start;
+    max-width: 1920px;
+}
+
+.star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+    position: absolute;
+
+    &--grey {
+        background-color: #e7e6e6;
+    }
+
+    &--white {
+        background-color: rgba(255,255,255,0.5)
+    }
 }

@@ -28,6 +28,7 @@
         display: flex;
         align-items: flex-end;
         flex-grow: 1;
+        position: relative;
     }
 
     &--button {
@@ -39,10 +40,8 @@
 }
 
 .hero__title {
-    // font-size: 6rem;
     font-size: clamp(1rem, 5vw, 6rem);
     font-weight: 900;
-    // line-height: 120px;
     line-height: clamp(2rem, 6vw, 120px);
     text-transform: uppercase;
 
@@ -82,3 +81,32 @@
 .hero__shape {
     @include mixins.pseudo("../icons/hero_yellow_vector.svg", 190px, 32px);
 }
+
+.hero__star-1 {
+    width: 58px;
+    height: 56px;
+    left: 23px;
+    bottom: 34px;
+}
+
+.hero__star-2 {
+    width: 58px;
+    height: 56px;
+    left: -20px;
+    top: 68px;
+}
+
+.hero__star-3 {
+    width: 58px;
+    height: 56px;
+    right: 238px;
+    top: 104px;
+}
+
+.hero__star-4 {
+    width: 58px;
+    height: 56px;
+    right: 92px;
+    bottom: 83px;
+}
+

@@ -1,0 +1,23 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+
+.promo-title__marked {
+    position: relative;
+    z-index: 1;
+    &--white {
+        &::before {
+            content: "";
+            display: block;
+            width: calc((541 / 1920) * 100vw);
+            max-width: 541.5px;
+            height: 89%;
+            background-color: variables.$color-bg;
+
+            position: absolute;
+            transform: rotate(-2deg);
+            z-index: -1;
+            left: -20px;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.download__container {
+    padding: 0 119px;
+}
+
+.download__title {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 150%;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+
+    padding-top: 181px;
+    padding-bottom: 41px;
+}
+
+.download__description {
+    color: #7c7c7c;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.96px;
+
+    padding-bottom: 65px;
+}
+
+.download__image {
+    position: relative;
+    object-fit: none;
+    z-index: 1;
+}
+
+.download__link {
+    width: 204px;
+    height: 71px;
+    border-radius: 10px;
+
+    transition: transform 0.2s ease-in-out;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        &:active {
+            transform: scale(1);
+            z-index: 1;
+        }
+    }
+
+    &--apple {
+        background-image: url("../icons/appstore.svg");
+    }
+
+    &--googleplay {
+        background-image: url("../icons/googleplay.svg");
+    }
+}
+
+.download__mobile-round {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    &--1 {
+        width: 440px;
+        height: 434.5px;
+        border-radius: 50%;
+        border: 1.7px solid #efeceb;
+    }
+
+    &--2 {
+        width: 537px;
+height: 530.256px;
+        border-radius: 50%;
+        border: 2.108px solid #efeceb;
+    }
+
+    &--3 {
+        width: 637px;
+height: 629px;
+        border-radius: 50%;
+        border: 2.5px solid #efeceb;
+    }
+}
