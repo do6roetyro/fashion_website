@@ -9,16 +9,18 @@
             span.filter__button New 
         ul.mobile-app__list.list
           each index in [0, 1, 2, 3]
-            li.mobile-app__item
+            li.mobile-app__item.mobile-item
 
               - let imgPath = ['../images/mobile_app_1.jpg', '../images/mobile_app_2.jpg', '../images/mobile_app_3.jpg', '../images/mobile_app_4.jpg'];
               - let imgAlt = ['Polkadot Red Dress', 'Striped Pink Dress', 'Striped Pink Dress', 'Striped Pink Dress'];
+              - let imgWidth = ['128.5']
+              - let imgHeight = ['181.2']
               - let title = ['Polkadot Red Dress', 'Striped Pink Dress'];
               - let price = ['Rs. 1,499.00', 'Rs. 1,299.00'];
       
-                img(src=imgPath[index], alt=imgAlt[index])
-                h3.mobile-app__title= title[index]
-                span.mobile-app__price= price[index]
+                img.mobile-item__image(src=imgPath[index], alt=imgAlt[index], width=[0], height=[0])
+                h3.mobile-item__title= title[index]
+                span.mobile-item__price= price[index]
         
         .mobile-app__toolbar.toolbar 
             span.toolbar--home

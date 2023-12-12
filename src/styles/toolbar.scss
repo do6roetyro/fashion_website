@@ -1,0 +1,28 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ffffff;
+    width: 85%;
+    
+
+    &--home {
+        @include mixins.pseudo("../icons/app_home.svg", 23.6px, 22.7px)
+    }
+
+    &--burger {
+        @include mixins.pseudo("../icons/app_burger.svg", 21px, 21px)
+    }
+
+    &--cart {
+        @include mixins.pseudo("../icons/app_cart.svg", 28.9px, 29.7px)
+    }
+
+    &--myprofile {
+        @include mixins.pseudo("../icons/app_myprofile.svg", 23.6px, 22.7px)
+    }
+}

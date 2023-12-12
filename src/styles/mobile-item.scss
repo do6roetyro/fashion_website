@@ -1,0 +1,16 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.mobile-item__image {
+    margin-bottom: 11.2px;
+}
+
+.mobile-item__title {
+    font-size: 12.2px;
+    font-weight: 500;
+}
+
+.mobile-item__price {
+    color: #757575;
+    font-size: 12.2px;
+}

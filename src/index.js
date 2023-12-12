@@ -19,6 +19,10 @@ import "./styles/favourite.scss";
 import "./styles/favourite-link.scss";
 import "./styles/download.scss";
 import "./styles/download-container.scss";
+import "./styles/subscribe.scss";
+import "./styles/subscribe-form.scss";
 //-- mobile_app
 import "./styles/mobile-app.scss";
+import "./styles/mobile-item.scss";
+import "./styles/toolbar.scss";
 // --FOOTER

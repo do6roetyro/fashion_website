@@ -1,6 +1,10 @@
 @use "variables.scss";
 @use "mixins.scss";
 
+.download__wrapper {
+    padding-bottom: 200px;
+}
+
 .download__container {
     padding: 0 119px;
 }
@@ -74,15 +78,52 @@
 
     &--2 {
         width: 537px;
-height: 530.256px;
+        height: 530.256px;
         border-radius: 50%;
         border: 2.108px solid #efeceb;
     }
 
     &--3 {
         width: 637px;
-height: 629px;
+        height: 629px;
         border-radius: 50%;
         border: 2.5px solid #efeceb;
+    }
+}
+
+.download__cirle {
+    border-radius: 50%;
+    position: absolute;
+
+    &--1 {
+        width: 22px;
+        height: 24px;
+        background-color: #89807a;
+        left: 110px;
+        top: 90px;
+    }
+
+    &--2 {
+        width: 34px;
+        height: 34px;
+        background-color: #ebd96b;
+        bottom: 15px;
+        left: 90px;
+    }
+
+    &--3 {
+        width: 50px;
+        height: 50px;
+        background-color: #ebd96b;
+        top: 55px;
+        right: 90px;
+    }
+
+    &--4 {
+        width: 17px;
+        height: 17px;
+        background-color: #89807a;
+        right: 50px;
+        bottom: 60px;
     }
 }
