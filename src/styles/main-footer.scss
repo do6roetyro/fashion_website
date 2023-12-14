@@ -1,0 +1,23 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.main-footer {
+    background-color: variables.$color-black;
+}
+
+.main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 119px;
+    padding-bottom: 147px;
+}
+
+.main-footer__social {
+    flex-basis: calc((415 / 1920) * 100vw);
+}
+
+.main-footer__navigation {
+    flex-basis: calc((890 / 1920) * 100vw);
+}

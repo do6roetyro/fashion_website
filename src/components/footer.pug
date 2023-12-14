@@ -1,24 +1,24 @@
 .main-footer__wrapper.wrapper 
-    .main-footer__social.social 
-        a.social_logo.link(href="#") Fashion
+    .main-footer__social.social(itemtype="http://www.schema.org/Organization") 
+        a.social_logo.link(href="#" itemprop="url") Fashion
         p.social__description Complete your style with awesome clothes from us.
         ul.social__list 
          each link in ['facebook', 'instagram', 'tweeter', 'in']
-             a.social__link.link.social__link(href=`#${link.toLowerCase()}/fasionshop.com#`, class=`social__link--${link.toLowerCase()}`)
+             a.social__link.link.social__link(href=`#${link.toLowerCase()}/fasionshop.com#`, class=`social__link--${link.toLowerCase()}` itemprop="sameAs", content=`${link}`)
               span.visually-hidden #{link}
-    nav.main-footer__navigation.footer-navigation
-        .footer-navigation__container.footer-navigation__container--company
-            h3.footer-navigation__title Company
-            ul.footer-navigation__list
+    nav.main-footer__navigation.footer-navigation(itemscope itemtype="http://schema.org/SiteNavigationElement") 
+        .footer-navigation__container.footer-navigation__container--company(itemprop="hasPart")
+            h3.footer-navigation__title(itemprop="name") Company
+            ul.footer-navigation__list(itemprop="mainContentOfPage")
              each link in ['About', 'Contact us', 'Support', 'Careers']
-                li.footer-navigation__item: a.footer-navigation__link.link(href=`#${link.toLowerCase()}`) #{link}
-        .footer-navigation__container.footer-navigation__container--quicklink
-            h3.footer-navigation__title Quick Link
-            ul.footer-navigation__list
+                li.footer-navigation__item(itemprop="significantLink"): a.footer-navigation__link.link(href=`#${link.toLowerCase()}` itemprop="url") #{link}
+        .footer-navigation__container.footer-navigation__container--quicklink(itemprop="hasPart")
+            h3.footer-navigation__title(itemprop="name") Quick Link
+            ul.footer-navigation__list(itemprop="mainContentOfPage")
              each link in ['Share Location', 'Orders Tracking', 'Size Guide', 'FAQs']
-                li.footer-navigation__item: a.footer-navigation__link.link(href=`#${link.toLowerCase()}`) #{link}
-        .footer-navigation__container.footer-navigation__container--legal
-            h3.footer-navigation__title Legal
-            ul.footer-navigation__list
+                li.footer-navigation__item(itemprop="significantLink"): a.footer-navigation__link.link(href=`#${link.toLowerCase()}` itemprop="url") #{link}
+        .footer-navigation__container.footer-navigation__container--legal(itemprop="hasPart")
+            h3.footer-navigation__title(itemprop="name") Legal
+            ul.footer-navigation__list(itemprop="mainContentOfPage")
              each link in ['Terms & conditions', 'Privacy Policy']
-                li.footer-navigation__item: a.footer-navigation__link.link(href=`#${link.toLowerCase()}`) #{link}
+                li.footer-navigation__item(itemprop="significantLink"): a.footer-navigation__link.link(href=`#${link.toLowerCase()}` itemprop="url") #{link}

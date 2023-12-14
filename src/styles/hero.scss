@@ -16,14 +16,14 @@
     }
 
     &--description {
-        padding-top: 77px;
-        padding-bottom: 90px;
-        padding-left: 120px;
+        padding-top: calc((77/1920)*100vw);
+        padding-bottom: calc((90/1920)*100vw);
+        padding-left: calc((120/1920)*100vw);
     }
 
     &--image {
-        padding-top: 69px;
-        padding-right: 81px;
+        padding-top: calc((69/1920)*100vw);
+        padding-right: calc((81/1920)*100vw);
 
         display: flex;
         align-items: flex-end;
@@ -70,7 +70,7 @@
     border-radius: 10px;
 
     position: relative;
-    padding: 18px 40px;
+    padding: calc((18/1920)*100vw) calc((40/1920)*100vw);
 }
 
 .hero__image {
@@ -79,34 +79,22 @@
 }
 
 .hero__shape {
-    @include mixins.pseudo("../icons/hero_yellow_vector.svg", 190px, 32px);
+    @include mixins.pseudo("../icons/hero_yellow_vector.svg", calc((190 / 1920) * 100vw), calc((32 / 1920) * 100vw));
+    background-size: contain;
 }
 
 .hero__star-1 {
-    width: 58px;
-    height: 56px;
-    left: 23px;
-    bottom: 34px;
+    @include mixins.star-hero(58, 56, auto, auto, 34, 23);
 }
 
 .hero__star-2 {
-    width: 58px;
-    height: 56px;
-    left: -20px;
-    top: 68px;
+    @include mixins.star-hero(58, 56, 68, auto, auto, -20);
 }
 
 .hero__star-3 {
-    width: 58px;
-    height: 56px;
-    right: 238px;
-    top: 104px;
+    @include mixins.star-hero(58, 56, 104, 238, auto, auto);
 }
 
 .hero__star-4 {
-    width: 58px;
-    height: 56px;
-    right: 92px;
-    bottom: 83px;
+    @include mixins.star-hero(58, 56, auto, 92, 83, auto);
 }
-

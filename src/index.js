@@ -26,3 +26,12 @@ import "./styles/mobile-app.scss";
 import "./styles/mobile-item.scss";
 import "./styles/toolbar.scss";
 // --FOOTER
+import "./styles/main-footer.scss";
+import "./styles/social.scss";
+import "./styles/footer-navigation.scss";
+
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+        // Ваш код для проверки формы
+        alert("Форма отправлена");
+        event.preventDefault(); // Предотвращение стандартного поведения отправки формы
+    });

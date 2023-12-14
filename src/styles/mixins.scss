@@ -14,3 +14,12 @@
   height: $height;
   flex-shrink: 0;
 }
+
+@mixin star-hero($width, $height, $top, $right, $bottom, $left) {
+  width: calc(($width / 1920) * 100vw);
+  height: calc(($height / 1920) * 100vw);
+  top: calc(($top / 1920) * 100vw);
+  right: calc(($right / 1920) * 100vw);
+  bottom: calc(($bottom / 1920) * 100vw);
+  left: calc(($left / 1920) * 100vw);
+}

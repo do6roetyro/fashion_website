@@ -1,0 +1,120 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.social_logo {
+    color: variables.$color-bg;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    width: fit-content;
+
+    position: relative;
+
+    transition: color 0.2s ease-in-out;
+
+    &::after {
+        content: "";
+        display: block;
+        background-color: currentColor;
+        width: 0;
+        height: 4px;
+
+        position: absolute;
+        bottom: 4px;
+
+        transition: width 0.2s ease-in-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &:active {
+            &::after {
+                display: none;
+            }
+
+            color: variables.$color-yellow;
+        }
+    }
+}
+
+.social__description {
+    color: #8e8e8e;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+}
+
+.social__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc((250 / 1920) * 100vw);
+}
+
+.social__link {
+    width: 52px;
+    height: 52px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    transition: transform 0.2s ease-in-out;
+
+    &--facebook {
+        background-image: url("../icons/social_facebook.svg");
+    }
+    &--instagram {
+        background-image: url("../icons/social_instagram.svg");
+    }
+    &--tweeter {
+        background-image: url("../icons/social_tweeter.svg");
+    }
+    &--in {
+        background-image: url("../icons/social_in.svg");
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        background-color: variables.$color-yellow;
+        width: 0;
+        height: 4px;
+
+        position: absolute;
+        bottom: -10px;
+
+        transition: width 0.2s ease-in-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &:active {
+            &::after {
+                display: none;
+            }
+
+            transform: translateY(5px);
+        }
+    }
+}

@@ -1,6 +1,6 @@
 section.new.wrapper
     h2.new__title new arrivals
-    ul.new__list.list
+    ul.new__list.list(itemscope itemtype="http://schema.org/Product")
      each link, index in ['Hoodies', 'Coats', 'T-shirts']
        li.new__item
          - let imgPath = ['../images/new_1.jpg', '../images/new_2.jpg', '../images/new_3.jpg'];
@@ -10,11 +10,11 @@ section.new.wrapper
          a.new__link.link.new-link(href=`#${link.toLowerCase()}`)
 
            .new-link__image
-             img(src=imgPath[index], alt=imgAlt[index])
+             img(itemprop="image", src=imgPath[index], alt=imgAlt[index])
 
            .new-link__container
              .new-link__container-inner
-               h3.new-link__title= title[index]
+               h3(itemprop="name").new-link__title= title[index]
                span.new-link__description Explore Now!
 
              button.new-link__button.button.button--arrow(type="button")

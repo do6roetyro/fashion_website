@@ -63,15 +63,34 @@
     display: flex;
     align-items: center;
 
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        background-color: currentColor;
+        width: 0;
+        height: 2px;
+
+        position: absolute;
+        bottom: 18px;
+
+        transition: width 0.2s ease-in-out;
+    }
+
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            opacity: 0.7;
-            transition: opacity 0.2s;
+            &::after {
+                width: 100%;
+            }
         }
 
         &:active {
-            opacity: 0.4;
-            transition: opacity 0.2s;
+            &::after {
+                display: none;
+            }
+
+            color: variables.$color-yellow;
         }
     }
 }

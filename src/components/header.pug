@@ -1,9 +1,9 @@
 header.main-header 
-    nav.main-nav
-      .wrapper.main-nav__wrapper
-        a.main-nav__logo.link(href="#") Fashion
+    nav.main-nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+      .wrapper.main-nav__wrapper(itemprop="hasPart")
+        a.main-nav__logo.link(href="#" itemprop="url") Fashion
         .main-nav__container
-          ul.main-nav__list.list
+          ul.main-nav__list.list(itemprop="mainContentOfPage")
             each link in ['Catalogue', 'Fasion', 'Favourite', 'Lifestyle']
-              li.main-nav__item: a.main-nav__link.link(href=`#${link.toLowerCase()}`) #{link}
-          button.main-nav__button.button.button--black(type="button") Sign up   
+              li.main-nav__item(itemprop="significantLink"): a.main-nav__link.link(href=`#${link.toLowerCase()}` itemprop="url") #{link}
+          button.main-nav__button.button.button--black(type="button" itemprop="potentialAction" itemscope itemtype="http://schema.org/SignUpAction") Sign up   
