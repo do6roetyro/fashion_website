@@ -15,7 +15,7 @@
   flex-shrink: 0;
 }
 
-@mixin star-hero($width, $height, $top, $right, $bottom, $left) {
+@mixin star($width, $height, $top, $right, $bottom, $left) {
   width: calc(($width / 1920) * 100vw);
   height: calc(($height / 1920) * 100vw);
   top: calc(($top / 1920) * 100vw);

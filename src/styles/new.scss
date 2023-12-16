@@ -13,6 +13,7 @@
     width: fit-content;
 
     margin-bottom: 101px;
+    margin-bottom: clamp(60px, 5vw, 101px);
 
     &::before {
         @include mixins.pseudo("../icons/new_yellow_vector.svg", 186px, 35px);
@@ -26,8 +27,13 @@
 
 .new__list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    column-gap: clamp(25px, 2.3vw, 90px);
+    row-gap: 32px;
 
     padding-bottom: 109px;
+}
+
+.new__item {
+    flex-basis: clamp(250px, calc((484 / 1920) * 100vw), 484px);
 }

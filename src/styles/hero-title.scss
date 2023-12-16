@@ -1,6 +1,13 @@
 @use "variables.scss";
 @use "mixins.scss";
 
+.hero-title {
+    font-size: clamp(1rem, 5vw, 6rem);
+    font-weight: 900;
+    line-height: clamp(2rem, 6vw, 120px);
+    text-transform: uppercase;
+}
+
 .hero-title__marked {
     display: block;
     position: relative;

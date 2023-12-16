@@ -10,8 +10,8 @@ section.favourite
       
               a.favourite__link.link.favourite-link(href=`#${link.toLowerCase()}`)
       
-                .favourite-link__image
-                  img(src=imgPath[index], alt=imgAlt[index])
+                .favourite-link__image-container
+                  img.favourite-link__image(src=imgPath[index], alt=imgAlt[index])
       
                 .favourite-link__container
                   .favourite-link__container-inner

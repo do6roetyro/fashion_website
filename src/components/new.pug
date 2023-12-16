@@ -4,13 +4,15 @@ section.new.wrapper
      each link, index in ['Hoodies', 'Coats', 'T-shirts']
        li.new__item
          - let imgPath = ['../images/new_1.jpg', '../images/new_2.jpg', '../images/new_3.jpg'];
+         - let imgWidth = ['484']
+         - let imgHeight = ['704']
          - let imgAlt = ['Hoodies & Sweetshirt', 'Coats & Parkas', 'Tees & T-Shirt'];
          - let title = ['Hoodies & Sweetshirt', 'Coats & Parkas', 'Tees & T-Shirt'];
 
          a.new__link.link.new-link(href=`#${link.toLowerCase()}`)
 
-           .new-link__image
-             img(itemprop="image", src=imgPath[index], alt=imgAlt[index])
+           .new-link__image-container
+             img.new-link__image(itemprop="image", src=imgPath[index], alt=imgAlt[index], width=imgWidth[0], height=imgHeight[0])
 
            .new-link__container
              .new-link__container-inner

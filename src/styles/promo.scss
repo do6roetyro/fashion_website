@@ -31,7 +31,7 @@
     width: clamp(320px, 100%, 1920px);
 
     margin: 0 auto;
-    margin-bottom: 190px;
+    margin-bottom: clamp(90px, 5vw, 190px);
 
     display: flex;
 }
@@ -43,91 +43,81 @@
 
 .promo__subject-container {
     flex-basis: calc((933 / 1920) * 100vw);
-    padding: 128px 200px 55px 67px;
+    padding: 0 100px 55px 67px;
 }
 
 .promo__image {
-    object-position: 2px;
+    height: 100%;
+    object-position: 2px bottom;
+    object-fit: cover;
+
+    // @media (width <=)
 }
 
 .promo__title {
-    font-size: 111.6px;
-    font-weight: 900;
-    line-height: 137px;
-    text-transform: uppercase;
-
-    padding-bottom: 33px;
+    padding-top:  clamp(48px, 5vw, 128px);
+    padding-bottom: clamp(16px, 2vw, 33px);
 }
 
 .promo__description {
     color: #231300;
     font-size: 36px;
+    font-size: clamp(16px, 1.5vw, 36px);
     font-style: normal;
     font-weight: 500;
-    line-height: 52px;
+    line-height: clamp(24px, 2.5vw, 52px);
     letter-spacing: -0.7px;
+    word-break: pretty;
 
-    padding-bottom: 41px;
+    padding-bottom: clamp(24px, 2vw, 41px);
 }
 
 .promo__period {
-    font-size: 36px;
+    font-size: clamp(16px, 2vw, 36px);
     font-weight: 700;
     line-height: 52px;
     letter-spacing: 0.7px;
 }
 
 .promo__asterisk {
-    font-size: 36px;
+    font-size: clamp(16px, 2vw, 36px);
     line-height: 52px;
     letter-spacing: -0.7px;
 
-    padding-bottom: 51px;
+    padding-bottom: clamp(24px, 2vw, 51px);
 }
 
 .promo__link {
     color: variables.$color-bg;
     font-family: variables.$font;
-    font-size: 28px;
+    font-size: clamp(16px, 2vw, 28px);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.56px;
     text-transform: uppercase;
 
-    padding: 26px 51px;
+    padding: clamp(16px, 2vw, 26px) clamp(30px, 2vw, 51px);
     border-radius: 8.14px;
     width: fit-content;
 }
 
 .promo__star-1 {
-    width: 76px;
-    height: 76px;
     transform: rotate(-27deg);
-    left: 136px;
-    top: 152px;
+    @include mixins.star(76, 76, 152, auto, auto, 136);
 }
 
 .promo__star-2 {
-    width: 76px;
-    height: 76px;
     transform: rotate(-27deg);
-    left: 187px;
-    top: 490px;
+    @include mixins.star(76, 76, 490, auto, auto, 187);
 }
 
 .promo__star-3 {
-    width: 76px;
-    height: 76px;
     transform: rotate(-27deg);
-    right: 123px;
-    top: 83px;
+    @include mixins.star(76, 76, 83, 123, auto, auto);
 }
 
 .promo__star-4 {
-    width: 76px;
-    height: 76px;
     transform: rotate(-27deg);
-    right: 72px;
-    bottom: 226px;
+    @include mixins.star(76, 76, auto, 72, 226, auto);
 }

@@ -1,9 +1,13 @@
 @use "variables.scss";
 @use "mixins.scss";
 
-.new-link__image {
-    padding-bottom: 28px;
+.new-link__image-container {
+    padding-bottom: clamp(16px, 2vw, 28px);
     transition: transform 0.2s ease-in-out;
+
+    height: calc((704/1920) * 100vw);
+    max-height: 704px;
+
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
@@ -18,6 +22,10 @@
     }
 }
 
+.new-link__image {
+    height: 100%;
+}
+
 .new-link__container {
     display: flex;
     align-items: center;
@@ -27,6 +35,7 @@
 .new-link__title {
     color: #191919;
     font-size: 2rem;
+    font-size: clamp(18px, 2vw, 32px);
     font-style: normal;
     font-weight: 500;
     line-height: 50px;
@@ -53,7 +62,7 @@
 
 .new-link__description {
     color: #7f7f7f;
-    font-size: 1.5rem;
+    font-size: clamp(18px, 1.5vw, 24px);
     font-style: normal;
     font-weight: 500;
     line-height: 50px;

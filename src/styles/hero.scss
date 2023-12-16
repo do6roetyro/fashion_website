@@ -7,6 +7,8 @@
 }
 
 .hero__container {
+    overflow: hidden;
+
     &--main {
         background-color: #f4f6f5;
         border-radius: 59px;
@@ -16,14 +18,13 @@
     }
 
     &--description {
-        padding-top: calc((77/1920)*100vw);
-        padding-bottom: calc((90/1920)*100vw);
-        padding-left: calc((120/1920)*100vw);
+        padding-top: calc((77 / 1920) * 100vw);
+        padding-bottom: calc((90 / 1920) * 100vw);
+        padding-left: calc((120 / 1920) * 100vw);
     }
 
     &--image {
-        padding-top: calc((69/1920)*100vw);
-        padding-right: calc((81/1920)*100vw);
+        padding-top: calc((69 / 1920) * 100vw);
 
         display: flex;
         align-items: flex-end;
@@ -40,15 +41,10 @@
 }
 
 .hero__title {
-    font-size: clamp(1rem, 5vw, 6rem);
-    font-weight: 900;
-    line-height: clamp(2rem, 6vw, 120px);
-    text-transform: uppercase;
-
     position: relative;
     z-index: 1;
 
-    padding-bottom: 40px;
+    padding-bottom: clamp(24px, 2.2vw, 40px);
 
     width: 474px;
 }
@@ -70,31 +66,35 @@
     border-radius: 10px;
 
     position: relative;
-    padding: calc((18/1920)*100vw) calc((40/1920)*100vw);
+    padding: calc((18 / 1920) * 100vw) calc((40 / 1920) * 100vw);
 }
 
 .hero__image {
-    object-position: bottom;
-    height: auto;
+    height: 100%;
+    object-position: 0 bottom;
 }
 
 .hero__shape {
     @include mixins.pseudo("../icons/hero_yellow_vector.svg", calc((190 / 1920) * 100vw), calc((32 / 1920) * 100vw));
     background-size: contain;
+
+    @media (width <= 1190px) {
+        display: none;
+    }
 }
 
 .hero__star-1 {
-    @include mixins.star-hero(58, 56, auto, auto, 34, 23);
+    @include mixins.star(58, 56, auto, auto, 34, 23);
 }
 
 .hero__star-2 {
-    @include mixins.star-hero(58, 56, 68, auto, auto, -20);
+    @include mixins.star(58, 56, 68, auto, auto, -20);
 }
 
 .hero__star-3 {
-    @include mixins.star-hero(58, 56, 104, 238, auto, auto);
+    @include mixins.star(58, 56, 104, 238, auto, auto);
 }
 
 .hero__star-4 {
-    @include mixins.star-hero(58, 56, auto, 92, 83, auto);
+    @include mixins.star(58, 56, auto, 92, 83, auto);
 }

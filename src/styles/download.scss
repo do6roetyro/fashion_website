@@ -6,7 +6,7 @@
 }
 
 .download__container {
-    padding: 0 119px;
+    padding: 0 clamp(56px, calc((119 / 1920) * 100vw), 119px);
 }
 
 .download__title {
