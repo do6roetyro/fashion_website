@@ -5,26 +5,30 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: clamp(32px, calc((80 / 1920) * 100vw), 188px);
 }
 
 .footer-navigation__title {
     color: #d9d9d9;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: clamp(32px, 1.5vw, 40px);
     letter-spacing: 0.48px;
 
-    padding-bottom: 32px;
+    padding-bottom: clamp(16px, calc((32 / 1920) * 100vw), 32px);
 }
 
 .footer-navigation__list {
     color: #8e8e8e;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: clamp(32px, 1.5vw, 40px);
     letter-spacing: 0.48px;
+    text-wrap: pretty;
+
+    min-width: fit-content;
 
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: clamp(16px, calc((32 / 1920) * 100vw), 32px);
     justify-content: flex-start;
     align-items: flex-start;
 

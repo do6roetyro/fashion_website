@@ -23,3 +23,11 @@
   bottom: calc(($bottom / 1920) * 100vw);
   left: calc(($left / 1920) * 100vw);
 }
+
+@mixin mobile-round($width, $height) {
+  width: calc(($width/1920) * 100vw);
+  max-width: #{$width}px;
+  height: calc(($height/1920) * 100vw);
+  max-height: #{$height}px;
+  border-radius: 50%;
+}

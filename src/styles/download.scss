@@ -2,7 +2,7 @@
 @use "mixins.scss";
 
 .download__wrapper {
-    padding-bottom: 200px;
+    padding-bottom: clamp(100px, calc((200 / 1920) * 100vw), 200px);
 }
 
 .download__container {
@@ -11,23 +11,24 @@
 
 .download__title {
     font-size: 3rem;
+    font-size: clamp(36px, 3vw, 48px);
     font-weight: 900;
     line-height: 150%;
-    letter-spacing: 2.88px;
+    letter-spacing: clamp(1.88px, 2vw, 2.88px);
     text-transform: uppercase;
 
     padding-top: 181px;
-    padding-bottom: 41px;
+    padding-bottom: clamp(24px, calc((41 / 1920) * 100vw), 41px);
 }
 
 .download__description {
     color: #7c7c7c;
-    font-size: 1.5rem;
+    font-size: clamp(8px, 1.5vw, 24px);
     font-weight: 500;
-    line-height: 35px;
+    line-height: clamp(10px, 2.5vw, 35px);
     letter-spacing: -0.96px;
 
-    padding-bottom: 65px;
+    padding-bottom: clamp(32px, calc((65 / 1920) * 100vw), 65px);
 }
 
 .download__image {
@@ -38,7 +39,10 @@
 
 .download__link {
     width: 204px;
+    width: clamp(51px, calc((204 / 1920) * 100vw), 204px);
     height: 71px;
+    height: clamp(calc(71px / 4), calc((71 / 1920) * 100vw), 71px);
+
     border-radius: 10px;
 
     transition: transform 0.2s ease-in-out;
@@ -57,10 +61,12 @@
 
     &--apple {
         background-image: url("../icons/appstore.svg");
+        background-size: contain;
     }
 
     &--googleplay {
         background-image: url("../icons/googleplay.svg");
+        background-size: contain;
     }
 }
 
@@ -70,23 +76,17 @@
     margin: auto;
 
     &--1 {
-        width: 440px;
-        height: 434.5px;
-        border-radius: 50%;
+        @include mixins.mobile-round(440, 434.5);
         border: 1.7px solid #efeceb;
     }
 
     &--2 {
-        width: 537px;
-        height: 530.256px;
-        border-radius: 50%;
+        @include mixins.mobile-round(537, 530);
         border: 2.108px solid #efeceb;
     }
 
     &--3 {
-        width: 637px;
-        height: 629px;
-        border-radius: 50%;
+        @include mixins.mobile-round(637, 629);
         border: 2.5px solid #efeceb;
     }
 }
@@ -96,27 +96,18 @@
     position: absolute;
 
     &--1 {
-        width: 22px;
-        height: 24px;
         background-color: #89807a;
-        left: 110px;
-        top: 90px;
+        @include mixins.star(22, 24, 90, auto, auto, 110);
     }
 
     &--2 {
-        width: 34px;
-        height: 34px;
         background-color: #ebd96b;
-        bottom: 15px;
-        left: 90px;
+        @include mixins.star(34, 34, auto, auto, 15, 90);
     }
 
     &--3 {
-        width: 50px;
-        height: 50px;
         background-color: #ebd96b;
-        top: 55px;
-        right: 90px;
+        @include mixins.star(50, 50, 55, 90, auto, auto);
     }
 
     &--4 {
@@ -125,5 +116,6 @@
         background-color: #89807a;
         right: 50px;
         bottom: 60px;
+        @include mixins.star(17, 17, auto, 50, 60, auto);
     }
 }

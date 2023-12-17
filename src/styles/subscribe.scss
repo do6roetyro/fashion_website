@@ -6,7 +6,8 @@
 }
 
 .subscribe__wrapper {
-    padding: 141px 440px 156px;
+    padding-top: clamp(70px, calc((141 / 1920) * 100vw), 141px);
+    padding-bottom: clamp(77px, calc((155 / 1920) * 100vw), 155px);
     text-align: center;
 }
 
@@ -14,21 +15,28 @@
     color: #ffffff;
     text-align: center;
     font-size: 55px;
+    font-size: clamp(36px, 4vw, 55px);
     font-weight: 900;
     line-height: 70px;
+    line-height: clamp(45px, 4vw, 70px);
     letter-spacing: 1.65px;
     text-transform: uppercase;
     white-space: break-spaces;
 
+    width: clamp(483px, calc((966 / 1920) * 100vw), 966px);
+
+    margin: 0 auto;
     padding-bottom: 37px;
 }
 
 .subscribe__description {
     color: #fffcf8;
-    font-size: 32px;
-    line-height: 35px;
+    font-size: clamp(16px, 4vw, 32px);
+    line-height: clamp(24px, 4vw, 40px);
     letter-spacing: 0.96px;
 
+    width: clamp(505px, calc((1010 / 1920) * 100vw), 1010px);
+
+    margin: 0 auto;
     padding-bottom: 49px;
 }
-

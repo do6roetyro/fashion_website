@@ -35,3 +35,14 @@ import "./styles/footer-navigation.scss";
         alert("Форма отправлена");
         event.preventDefault(); // Предотвращение стандартного поведения отправки формы
     });
+
+    const menu = document.querySelector('.main-nav__list');
+    const buttonMenu = document.querySelector('.main-nav__button-menu');
+    const logo = document.querySelector('.main-nav__logo');
+    
+    // -- Меню навигации на мобилке.
+    buttonMenu.onclick = function () {
+    menu.classList.toggle("main-nav__list--close");
+    buttonMenu.classList.toggle("main-nav__button-menu--burger");
+    logo.classList.toggle("main-nav__logo--close");
+  };

@@ -11,7 +11,8 @@
     align-items: center;
 
     padding-top: 119px;
-    padding-bottom: 147px;
+    padding-top: clamp(72px, calc((119 / 1920) * 100vw), 119px);
+    padding-bottom: clamp(96px, calc((147 / 1920) * 100vw), 147px);
 }
 
 .main-footer__social {

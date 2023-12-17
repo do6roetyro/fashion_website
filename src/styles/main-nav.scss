@@ -10,6 +10,12 @@
     padding-bottom: 4rem;
 
     text-transform: uppercase;
+    position: relative;
+
+    @media (width <= variables.$screen-tablet) {
+        gap: 64px;
+        padding-bottom: 7rem;
+    }
 }
 
 .main-nav__logo {
@@ -20,6 +26,10 @@
     font-size: clamp(20px, 2.5vw, 30px);
     font-weight: 900;
     letter-spacing: 0.9px;
+
+    @media (width <= variables.$screen-tablet) {
+        align-self: start;
+    }
 
     &::before {
         @include mixins.pseudo("../icons/header_logo.svg", 32px, 29px);
@@ -48,9 +58,33 @@
     align-items: center;
     flex-wrap: wrap;
     gap: clamp(20px, 1.5vw, 65px);
-    font-size: clamp(16px, 6vw, 22px);
+    font-size: clamp(16px, 2.5vw, 22px);
     font-weight: 500;
     letter-spacing: 0.22px;
+
+    @media (width <= variables.$screen-tablet) {
+        position: absolute;
+        inset: 0;
+        top: 88px;
+
+        display: flex;
+        row-gap: 0px;
+
+        padding: 0 100px;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        display: block;
+        position: absolute;
+        inset: 0;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+
+        &--close {
+            display: none;
+        }
+    }
 }
 
 .main-nav__link {
@@ -68,9 +102,13 @@
         height: 2px;
 
         position: absolute;
-        bottom: 18px;
+        
 
         transition: width 0.2s ease-in-out;
+
+        @media (width <= variables.$screen-tablet) {
+            bottom: 0;
+        }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -94,10 +132,58 @@
     display: flex;
     align-items: center;
     gap: 65px;
+
     padding: calc((17 / 1920) * 100vw) calc((22 / 1920) * 100vw);
+
     border-radius: 7px;
+
+    font-size: clamp(16px, 2.5vw, 24px);
     font-weight: 500;
-    font-size: clamp(16px, 2.5vw, 24px);;
     letter-spacing: -0.72px;
     text-transform: uppercase;
+    white-space: nowrap;
+
+    @media (width <= variables.$screen-tablet) {
+        font-size: clamp(16px, 2vw, 24px);
+        height: fit-content;
+    }
+}
+
+.main-nav__button-menu {
+    &--cross,
+    &--burger {
+        display: none;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        &--cross {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+
+            background-image: url("../icons/nav_cross.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #ffffff;
+        }
+
+        &--burger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+
+            background-image: url("../icons/nav_burger.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #ffffff;
+        }
+    }
 }
