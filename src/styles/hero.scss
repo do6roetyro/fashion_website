@@ -15,12 +15,21 @@
 
         display: flex;
         gap: 43px;
+
+        @media (width <= variables.$screen-tablet) {
+            gap: clamp(24px, calc((43 / 1920) * 100vw), 43px);
+        }
     }
 
     &--description {
         padding-top: calc((77 / 1920) * 100vw);
         padding-bottom: calc((90 / 1920) * 100vw);
         padding-left: calc((120 / 1920) * 100vw);
+
+        @media (width <= variables.$screen-tablet) {
+            flex-shrink: 0;
+            width: calc((320 / 1024) * 100vw);
+        }
     }
 
     &--image {
@@ -54,7 +63,10 @@
     font-size: clamp(0.5rem, 2vw, 2rem);
     letter-spacing: -1.6px;
 
-    padding-bottom: 32px;
+    padding-bottom: clamp(16px, calc((32 / 1920) * 100vw), 32px);
+    @media (width <= variables.$screen-tablet) {
+        letter-spacing: normal;
+    }
 }
 
 .hero__button {
@@ -72,6 +84,11 @@
 .hero__image {
     height: 100%;
     object-position: 0 bottom;
+
+    @media (width <= variables.$screen-tablet) {
+        object-position: calc((1 / 1024) * 100vw) bottom;
+        object-fit: cover;
+    }
 }
 
 .hero__shape {
@@ -85,16 +102,32 @@
 
 .hero__star-1 {
     @include mixins.star(58, 56, auto, auto, 34, 23);
+
+    @media (width <= variables.$screen-tablet) {
+        display: none;
+    }
 }
 
 .hero__star-2 {
     @include mixins.star(58, 56, 68, auto, auto, 0);
+
+    @media (width <= variables.$screen-tablet) {
+        display: none;
+    }
 }
 
 .hero__star-3 {
     @include mixins.star(58, 56, 104, 238, auto, auto);
+
+    @media (width <= variables.$screen-tablet) {
+        display: none;
+    }
 }
 
 .hero__star-4 {
     @include mixins.star(58, 56, auto, 92, 83, auto);
+
+    @media (width <= variables.$screen-tablet) {
+        display: none;
+    }
 }

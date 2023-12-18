@@ -16,7 +16,7 @@
     margin-bottom: clamp(60px, 5vw, 101px);
 
     &::before {
-        @include mixins.pseudo("../icons/new_yellow_vector.svg", 186px, 35px);
+        @include mixins.pseudo("../icons/new_yellow_vector.svg", clamp(60px, calc((186 / 1920) * 100vw), 186px), clamp(12px, calc((35 / 1920) * 100vw), 35px));
 
         position: absolute;
         z-index: -1;
