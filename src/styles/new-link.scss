@@ -24,6 +24,11 @@
 
 .new-link__image {
     height: 100%;
+
+    // @media (width <= variables.$screen-tablet) {
+    //     object-fit: cover;
+    //     border-radius: 12px;
+    // }
 }
 
 .new-link__container {
@@ -35,13 +40,17 @@
 .new-link__title {
     color: #191919;
     font-size: 2rem;
-    font-size: clamp(18px, 2vw, 32px);
+    font-size: clamp(14px, 2vw, 32px);
     font-style: normal;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: -1.28px;
 
     margin-bottom: -8px;
+
+    @media (width <= variables.$screen-tablet) {
+        line-height: 30px;
+    }
 
     transition: all 0.1s ease-in-out;
 
@@ -62,9 +71,15 @@
 
 .new-link__description {
     color: #7f7f7f;
-    font-size: clamp(18px, 1.5vw, 24px);
+    font-size: clamp(14px, 1.5vw, 24px);
     font-style: normal;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: -0.96px;
+}
+
+
+.new-link__button {
+    width: clamp(16px,3vw,32px);
+    height: clamp(8px,3vw,24px);
 }

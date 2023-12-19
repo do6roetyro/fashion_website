@@ -32,6 +32,7 @@
     background: transparent;
     @include mixins.pseudo("../icons/arrow.svg", 32px, 24px);
     z-index: 1;
+    background-size: contain;
 
     @media (hover: hover) and (pointer: fine) {
         transition: transform 0.1s ease-in-out;

@@ -62,6 +62,14 @@ span {
     margin: 0 auto;
     text-align: start;
     max-width: 1920px;
+
+    @media (width <= variables.$screen-tablet) {
+        padding: 0 50px;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        padding: 0 30px;
+    }
 }
 
 .star {
