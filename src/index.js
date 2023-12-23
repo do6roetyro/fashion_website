@@ -10,6 +10,7 @@ import "./styles/main-nav.scss";
 import "./styles/main-container.scss";
 import "./styles/hero.scss";
 import "./styles/hero-title.scss";
+import "./styles/hero-container-description.scss";
 import "./styles/collaboration.scss";
 import "./styles/new.scss";
 import "./styles/new-link.scss";

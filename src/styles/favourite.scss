@@ -17,9 +17,18 @@
         @include mixins.pseudo("../icons/new_yellow_vector.svg", 186px, 35px);
 
         position: absolute;
+        background-size: contain;
         z-index: -1;
         right: 0;
         bottom: -10px;
+    }
+
+    @media (width <= variables.$screen-tablet-large) {
+        &::before {
+            width: calc(186px / 2);
+            height: calc(35px / 2);
+            bottom: 0;
+        }
     }
 }
 

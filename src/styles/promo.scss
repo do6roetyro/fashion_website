@@ -45,7 +45,7 @@
     flex-basis: calc((933 / 1920) * 100vw);
     padding: 0 calc((100 / 1920) * 100vw) 55px 67px;
 
-    @media (width <= 768px) {
+    @media (width <= variables.$screen-tablet-small) {
         padding-left: 32px;
         padding-right: 18px;
     }
@@ -56,12 +56,16 @@
     object-position: 2px bottom;
     object-fit: cover;
 
-    @media (width <= variables.$screen-tablet) {
-        object-position: clamp(-20px, calc((-1 / 1920) * 100vw), 100px) bottom;
+    @media (width <= variables.$screen-tablet-large) {
+        object-position: clamp(-20px, calc((-120 / 1920) * 100vw), 100px) bottom;
     }
 
     @media (width <= 580px) {
         object-position: clamp(-60px, calc((-300 / 1920) * 100vw), 100px) bottom;
+    }
+
+    @media (width <= 480px) {
+        object-position: clamp(-150px, calc((-380 / 1920) * 100vw), 100px) bottom;
     }
 }
 
@@ -82,14 +86,13 @@
 
     padding-bottom: clamp(16px, 2vw, 41px);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         line-height: 36px;
     }
 
     @media (width <= 700px) {
         line-height: 20px;
     }
-
 }
 
 .promo__period {
@@ -98,7 +101,7 @@
     line-height: 54px;
     letter-spacing: 0.7px;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         line-height: 36px;
     }
 }
@@ -110,7 +113,7 @@
 
     padding-bottom: clamp(24px, 2vw, 51px);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         line-height: 36px;
     }
 
@@ -138,7 +141,7 @@
     transform: rotate(-27deg);
     @include mixins.star(76, 76, 152, auto, auto, 136);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }
@@ -147,7 +150,7 @@
     transform: rotate(-27deg);
     @include mixins.star(76, 76, 490, auto, auto, 187);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }
@@ -156,7 +159,7 @@
     transform: rotate(-27deg);
     @include mixins.star(76, 76, 83, 123, auto, auto);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }
@@ -165,7 +168,7 @@
     transform: rotate(-27deg);
     @include mixins.star(76, 76, auto, 72, 226, auto);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }

@@ -4,6 +4,10 @@
 .hero {
     padding-bottom: 63px;
     width: clamp(320px, 100%, 1920px);
+
+    @media (width <= variables.$screen-mobile) {
+        padding-bottom: 28px;
+    }
 }
 
 .hero__container {
@@ -16,8 +20,13 @@
         display: flex;
         gap: 43px;
 
-        @media (width <= variables.$screen-tablet) {
+        @media (width <= variables.$screen-tablet-large) {
             gap: clamp(24px, calc((43 / 1920) * 100vw), 43px);
+        }
+
+        @media (width <= variables.$screen-mobile) {
+            flex-direction: column;
+            gap: 0;
         }
     }
 
@@ -26,9 +35,14 @@
         padding-bottom: calc((90 / 1920) * 100vw);
         padding-left: calc((120 / 1920) * 100vw);
 
-        @media (width <= variables.$screen-tablet) {
+        @media (width <= variables.$screen-tablet-large) {
             flex-shrink: 0;
             width: calc((320 / 1024) * 100vw);
+        }
+
+        @media (width <= variables.$screen-mobile) {
+            width: auto;
+            padding: calc((100 / 1920) * 100vw) calc((64 / 1920) * 100vw);
         }
     }
 
@@ -39,6 +53,10 @@
         align-items: flex-end;
         flex-grow: 1;
         position: relative;
+
+        @media (width <= variables.$screen-mobile) {
+            padding-top: 0;
+        }
     }
 
     &--button {
@@ -56,16 +74,27 @@
     padding-bottom: clamp(24px, 2.2vw, 40px);
 
     width: 474px;
+
+    @media (width <= variables.$screen-mobile) {
+        width: auto;
+    }
 }
 
 .hero__description {
     color: #191818;
-    font-size: clamp(0.5rem, 2vw, 2rem);
+    font-size: clamp(8px, 2vw, 32px);
     letter-spacing: -1.6px;
 
     padding-bottom: clamp(16px, calc((32 / 1920) * 100vw), 32px);
-    @media (width <= variables.$screen-tablet) {
+
+    @media (width <= variables.$screen-tablet-large) {
         letter-spacing: normal;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        width: clamp(112px, calc((150 / 420) * 100vw), 200px);
+        font-size: clamp(8px, 2vw, 32px);
+        padding-bottom: 0;
     }
 }
 
@@ -79,15 +108,24 @@
 
     position: relative;
     padding: calc((18 / 1920) * 100vw) calc((40 / 1920) * 100vw);
+
+    @media (width <= variables.$screen-mobile) {
+        flex-shrink: 0;
+    }
 }
 
 .hero__image {
     height: 100%;
     object-position: 0 bottom;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         object-position: calc((1 / 1024) * 100vw) bottom;
         object-fit: cover;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        object-fit: contain;
+        object-position: bottom;
     }
 }
 
@@ -103,7 +141,7 @@
 .hero__star-1 {
     @include mixins.star(58, 56, auto, auto, 34, 23);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }
@@ -111,7 +149,7 @@
 .hero__star-2 {
     @include mixins.star(58, 56, 68, auto, auto, 0);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }
@@ -119,7 +157,7 @@
 .hero__star-3 {
     @include mixins.star(58, 56, 104, 238, auto, auto);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }
@@ -127,7 +165,7 @@
 .hero__star-4 {
     @include mixins.star(58, 56, auto, 92, 83, auto);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         display: none;
     }
 }

@@ -12,9 +12,20 @@
     text-transform: uppercase;
     position: relative;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         gap: 64px;
         padding-bottom: 5rem;
+    }
+
+    @media (width <= 500px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        gap: 0;
     }
 }
 
@@ -27,12 +38,19 @@
     font-weight: 900;
     letter-spacing: 0.9px;
 
-    @media (width <= variables.$screen-tablet) {
+    &::before {
+        @include mixins.pseudo("../icons/header_logo.svg", 32px, 29px);
+    }
+
+    @media (width <= variables.$screen-tablet-large) {
         align-self: start;
     }
 
-    &::before {
-        @include mixins.pseudo("../icons/header_logo.svg", 32px, 29px);
+    @media (width <= variables.$screen-mobile) {
+        &::before {
+            @include mixins.pseudo("../icons/header_logo.svg", 27px, 24px);
+            background-size: contain;
+        }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -50,7 +68,12 @@
 
 .main-nav__container {
     display: flex;
+    align-items: center;
     gap: clamp(20px, 1.5vw, 54px);
+
+    @media (width <= variables.$screen-mobile) {
+        flex-direction: row-reverse;
+    }
 }
 
 .main-nav__list {
@@ -62,7 +85,7 @@
     font-weight: 500;
     letter-spacing: 0.22px;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         position: absolute;
         inset: 0;
         top: 88px;
@@ -75,16 +98,32 @@
         padding: 0 100px;
     }
 
-    @media (width <= variables.$screen-mobile) {
-        display: block;
+    @media (width <= 500px) {
+        display: none;
+
+        // margin: 0 auto;
+        // padding: 0;
+
+        // text-align: start;
+
+        width: 100%;
+        height: fit-content;
+
         position: absolute;
         inset: 0;
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
+        top: 90px;
+        z-index: 3;
+
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(2px);
 
         &--close {
-            display: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            padding-bottom: 12px;
+            padding-top: 18px;
         }
     }
 }
@@ -104,11 +143,11 @@
         height: 2px;
 
         position: absolute;
-        
+        bottom: 3px;
 
         transition: width 0.2s ease-in-out;
 
-        @media (width <= variables.$screen-tablet) {
+        @media (width <= variables.$screen-tablet-large) {
             bottom: 0;
         }
     }
@@ -145,7 +184,7 @@
     text-transform: uppercase;
     white-space: nowrap;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         font-size: clamp(16px, 2vw, 24px);
         height: fit-content;
     }
@@ -155,16 +194,16 @@
     &--cross,
     &--burger {
         display: none;
+
+        width: 24px;
+        height: 24px;
     }
 
-    @media (width <= variables.$screen-mobile) {
+    @media (width <= 500px) {
         &--cross {
             display: flex;
             align-items: center;
             justify-content: center;
-
-            width: 32px;
-            height: 32px;
 
             background-image: url("../icons/nav_cross.svg");
             background-position: center;
@@ -177,9 +216,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            width: 32px;
-            height: 32px;
 
             background-image: url("../icons/nav_burger.svg");
             background-position: center;

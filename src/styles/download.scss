@@ -2,7 +2,7 @@
 @use "mixins.scss";
 
 .download__wrapper {
-    padding-bottom: clamp(100px, calc((200 / 1920) * 100vw), 200px);
+    padding-bottom: clamp(60px, calc((200 / 1920) * 100vw), 200px);
 }
 
 .download__container {
@@ -16,9 +16,6 @@
     line-height: 150%;
     letter-spacing: clamp(1.88px, 2vw, 2.88px);
     text-transform: uppercase;
-
-    padding-top: 181px;
-    padding-bottom: clamp(24px, calc((41 / 1920) * 100vw), 41px);
 }
 
 .download__description {
@@ -38,10 +35,10 @@
 }
 
 .download__link {
-    width: 204px;
-    width: clamp(51px, calc((204 / 1920) * 100vw), 204px);
-    height: 71px;
-    height: clamp(calc(71px / 4), calc((71 / 1920) * 100vw), 71px);
+    width: clamp(102px, calc((204 / 1920) * 100vw), 204px);
+    height: clamp(36px, calc((71 / 1920) * 100vw), 71px);
+
+    background-repeat: no-repeat;
 
     border-radius: 10px;
 
@@ -95,6 +92,10 @@
     border-radius: 50%;
     position: absolute;
 
+    @media (width <= 900px) {
+        display: none;
+    }
+
     &--1 {
         background-color: #89807a;
         @include mixins.star(22, 24, 90, auto, auto, 110);
@@ -103,6 +104,7 @@
     &--2 {
         background-color: #ebd96b;
         @include mixins.star(34, 34, auto, auto, 15, 90);
+        
     }
 
     &--3 {

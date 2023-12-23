@@ -1,0 +1,11 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.hero-container-description__bottom {
+    @media (width <= variables.$screen-mobile) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+}

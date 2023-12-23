@@ -5,6 +5,10 @@
     min-width: 574px;
     width: fit-content;
     margin: 0 auto;
+
+    @media (width <= variables.$screen-tablet-small) {
+        min-width: auto;
+    }
 }
 
 .subscribe-form__label {
@@ -12,6 +16,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .subscribe-form__input {
@@ -28,13 +34,28 @@
     border: none;
 
     padding: clamp(16px, calc((30 / 1920) * 100vw), 27px);
+
+    &::placeholder {
+        color: #767676;
+        font-family: variables.$font;
+        font-size: clamp(12px, 2vw, 24px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: clamp(12px, 2vw, 35px);
+        letter-spacing: 0.72px;
+    }
+
+    @media (width <= variables.$screen-tablet-small) {
+        width: clamp(300px, calc((574 / 1024) * 100vw), 574px);
+    }
 }
 
 .subscribe-form__button {
     position: absolute;
-    right: 10px;
+    right: 8px;
 
-    padding: clamp(17px, calc((17 / 1920) * 100vw), 17px) clamp(35px, calc((35 / 1920) * 100vw), 35px) clamp(15px, calc((15 / 1920) * 100vw), 15px);
+    padding: clamp(17px, calc((17 / 1920) * 100vw), 17px) clamp(35px, calc((35 / 1920) * 100vw), 35px)
+        clamp(15px, calc((15 / 1920) * 100vw), 15px);
 
     border-radius: 8px;
 

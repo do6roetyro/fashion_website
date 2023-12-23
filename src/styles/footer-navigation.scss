@@ -6,6 +6,16 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: clamp(32px, calc((80 / 1920) * 100vw), 188px);
+
+    @media (width <= variables.$screen-tablet-small) {
+        align-self: normal;
+    }
+}
+
+.footer-navigation__container {
+    @media (width <= variables.$screen-tablet-small) {
+        flex-basis: content;
+    }
 }
 
 .footer-navigation__title {

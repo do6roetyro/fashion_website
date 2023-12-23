@@ -13,18 +13,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
 
     padding-top: 62px;
     padding-bottom: 55px;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         padding-top: clamp(28px, calc((62/1920) * 100vw), 62px);
         padding-bottom: clamp(24px, calc((55/1920) * 100vw), 55px);
     }
+
+    @media (width <= variables.$screen-tablet-small) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
 }
 
 .collaboration__item {
     background-size: contain;
+    aspect-ratio: 1;
+    min-width: 70px;
+    min-height: 30px;
+
+    @media (width <= variables.$screen-tablet-small) {
+        flex-basis: 25%;
+    }
 
     &--hm {
         @include mixins.pseudo("../icons/h&m.svg", calc((118 / 1920) * 100vw), calc((69 / 1920) * 100vw));

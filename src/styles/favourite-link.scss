@@ -11,6 +11,10 @@
         height: 575px;
     }
 
+    @media (width <= variables.$screen-tablet-large) {
+        height: auto;
+    }
+
     transition: transform 0.2s ease-in-out;
 
     @media (hover: hover) and (pointer: fine) {
@@ -35,6 +39,12 @@
         object-fit: cover;
         object-position: -20px;
     }
+
+    @media (width <= variables.$screen-tablet-large) {
+        width: 100%;
+        object-fit: contain;
+        object-position: 0;
+    }
 }
 
 .favourite-link__container {
@@ -45,13 +55,17 @@
 
 .favourite-link__title {
     color: variables.$color-black;
-    font-size: clamp(18px, 2vw, 32px);
+    font-size: clamp(14px, 2vw, 32px);
     font-style: normal;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: -1.28px;
 
     margin-bottom: -8px;
+
+    @media (width <= variables.$screen-tablet-large) {
+        line-height: 30px;
+    }
 
     transition: all 0.1s ease-in-out;
 
@@ -72,9 +86,14 @@
 
 .favourite-link__description {
     color: #7f7f7f;
-    font-size: clamp(18px, 1.5vw, 24px);
+    font-size: clamp(14px, 1.5vw, 24px);
     font-style: normal;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: -0.96px;
+}
+
+.favourite-link__button {
+    width: clamp(16px,3vw,32px);
+    height: clamp(8px,3vw,24px);
 }

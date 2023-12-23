@@ -1,3 +1,5 @@
+@use "variables.scss";
+
 @mixin absolute-center {
   position: absolute;
   inset: 0;
@@ -22,6 +24,13 @@
   right: calc(($right / 1920) * 100vw);
   bottom: calc(($bottom / 1920) * 100vw);
   left: calc(($left / 1920) * 100vw);
+
+  @media (width <= variables.$screen-tablet-large) {
+    top: calc(($top / 1024) * 100vw);
+    right: calc(($right / 1024) * 100vw);
+    bottom: calc(($bottom / 1024) * 100vw);
+    left: calc(($left / 1024) * 100vw);
+  }
 }
 
 @mixin mobile-round($width, $height) {

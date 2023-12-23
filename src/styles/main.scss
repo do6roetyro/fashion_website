@@ -63,7 +63,7 @@ span {
     text-align: start;
     max-width: 1920px;
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         padding: 0 50px;
     }
 

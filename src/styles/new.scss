@@ -27,6 +27,14 @@
         right: 0;
         bottom: 0;
     }
+
+    @media (width <= variables.$screen-tablet-large) {
+        &::before {
+            width: calc(186px / 2);
+            height: calc(35px / 2);
+            background-size: contain;
+        }
+    }
 }
 
 .new__list {
@@ -37,7 +45,7 @@
 
     padding-bottom: clamp(64px, 2.3vw, 109px);
 
-    @media (width <= variables.$screen-tablet) {
+    @media (width <= variables.$screen-tablet-large) {
         column-gap: clamp(20px, 2.3vw, 90px);
     }
 }

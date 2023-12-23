@@ -7,6 +7,11 @@
 
 .download-container__subject {
     flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    position: relative;
 }
 
 .download-container__image {
@@ -15,6 +20,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+    height: clamp(400px, calc((711 / 1920) * 100vw), 711px);
 }
 
 .download-container__links {

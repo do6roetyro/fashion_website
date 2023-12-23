@@ -2,12 +2,10 @@
 @use "mixins.scss";
 
 .promo-title {
-    // font-size: 111.6px;
     font-size: clamp(1rem, 5vw, 111.6px);
     font-weight: 900;
     line-height: clamp(2rem, 6vw, 137px);
     font-weight: 900;
-    // line-height: 137px;
     text-transform: uppercase;
 }
 
