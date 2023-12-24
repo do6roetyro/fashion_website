@@ -27,18 +27,22 @@
 
     margin: 0 auto;
     padding-bottom: 37px;
+
+    @media (width <= variables.$screen-tablet-small) {
+        width: auto;
+    }
 }
 
 .subscribe__description {
     color: #fffcf8;
-    font-size: clamp(16px, 2.5vw, 32px);
-    line-height: clamp(24px, 4vw, 40px);
+    font-size: clamp(14px, 2.5vw, 32px);
+    line-height: clamp(20px, 4vw, 40px);
     letter-spacing: 0.96px;
 
     width: clamp(700px, calc((1200 / 1920) * 100vw), 1010px);
 
     @media (width <= variables.$screen-tablet-small) {
-        width: clamp(300px, calc((1024 / 1920) * 100vw), 700px);
+        width: clamp(240px, calc((1024 / 1920) * 100vw), 700px);
     }
 
     margin: 0 auto;

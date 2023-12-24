@@ -25,6 +25,10 @@
         #fae157 91.52%,
         #f9df56 97.87%
     );
+
+    @media (width <= variables.$screen-mobile) {
+        background-color: #f9df56;
+    }
 }
 
 .promo__container {
@@ -34,11 +38,19 @@
     margin-bottom: clamp(64px, 5vw, 190px);
 
     display: flex;
+
+    @media (width <= variables.$screen-mobile) {
+        flex-direction: column;
+    }
 }
 
 .promo__image-container {
     flex-basis: calc((991 / 1920) * 100vw);
     position: relative;
+
+    @media (width <= variables.$screen-mobile) {
+        display: none;
+    }
 }
 
 .promo__subject-container {
@@ -48,6 +60,10 @@
     @media (width <= variables.$screen-tablet-small) {
         padding-left: 32px;
         padding-right: 18px;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        text-align: center;
     }
 }
 
@@ -67,11 +83,21 @@
     @media (width <= 480px) {
         object-position: clamp(-150px, calc((-380 / 1920) * 100vw), 100px) bottom;
     }
+
+    @media (width <= variables.$screen-mobile) {
+        object-position: center 0px;
+        height: 300px;
+    }
 }
 
 .promo__title {
-    padding-top:  clamp(48px, 5vw, 128px);
+    padding-top: clamp(48px, 5vw, 128px);
     padding-bottom: clamp(16px, 2vw, 33px);
+
+    @media (width <= variables.$screen-mobile) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 .promo__description {
@@ -93,6 +119,10 @@
     @media (width <= 700px) {
         line-height: 20px;
     }
+
+    @media (width <= variables.$screen-mobile) {
+        font-size: 18px;
+    }
 }
 
 .promo__period {
@@ -103,6 +133,10 @@
 
     @media (width <= variables.$screen-tablet-large) {
         line-height: 36px;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        font-size: 18px;
     }
 }
 
@@ -135,6 +169,10 @@
     padding: clamp(12px, 2vw, 26px) clamp(24px, 2vw, 51px);
     border-radius: 8.14px;
     width: fit-content;
+
+    @media (width <= variables.$screen-mobile) {
+        margin: 0 auto;
+    }
 }
 
 .promo__star-1 {

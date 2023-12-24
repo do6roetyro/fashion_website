@@ -7,20 +7,23 @@
 
 .collaboration__wrapper {
     margin-bottom: 69px;
+
+    @media (width <= variables.$screen-mobile) {
+        margin-bottom: 32px;
+    }
 }
 
 .collaboration__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
 
     padding-top: 62px;
     padding-bottom: 55px;
 
     @media (width <= variables.$screen-tablet-large) {
-        padding-top: clamp(28px, calc((62/1920) * 100vw), 62px);
-        padding-bottom: clamp(24px, calc((55/1920) * 100vw), 55px);
+        padding-top: clamp(28px, calc((62 / 1920) * 100vw), 62px);
+        padding-bottom: clamp(24px, calc((55 / 1920) * 100vw), 55px);
     }
 
     @media (width <= variables.$screen-tablet-small) {
@@ -28,7 +31,6 @@
         justify-content: center;
         gap: 32px;
     }
-
 }
 
 .collaboration__item {

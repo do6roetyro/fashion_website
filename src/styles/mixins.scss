@@ -40,3 +40,11 @@
   max-height: #{$height}px;
   border-radius: 50%;
 }
+
+@mixin mobile-round-768px($width, $height) {
+  width: calc(($width/768) * 100vw);
+  max-width: #{$width}px;
+  height: calc(($height/768) * 100vw);
+  max-height: #{$height}px;
+  border-radius: 50%;
+}

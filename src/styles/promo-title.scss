@@ -2,11 +2,16 @@
 @use "mixins.scss";
 
 .promo-title {
-    font-size: clamp(1rem, 5vw, 111.6px);
+    font-size: clamp(16px, 5vw, 111.6px);
     font-weight: 900;
-    line-height: clamp(2rem, 6vw, 137px);
+    line-height: clamp(32px, 6vw, 137px);
     font-weight: 900;
     text-transform: uppercase;
+
+    @media (width <= variables.$screen-mobile) {
+        font-size: 36px;
+        line-height: 48px;
+    }
 }
 
 .promo-title__marked {
@@ -25,6 +30,12 @@
             transform: rotate(-2deg);
             z-index: -1;
             left: -20px;
+        }
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        &::before {
+            width: 196px;
         }
     }
 }

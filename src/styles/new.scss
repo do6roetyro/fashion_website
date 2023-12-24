@@ -35,6 +35,10 @@
             background-size: contain;
         }
     }
+
+    @media (width <= variables.$screen-mobile) {
+        margin-bottom: 36px;
+    }
 }
 
 .new__list {
@@ -47,6 +51,11 @@
 
     @media (width <= variables.$screen-tablet-large) {
         column-gap: clamp(20px, 2.3vw, 90px);
+    }
+
+    @media (width <= variables.$screen-mobile) {
+       flex-direction: column;
+       flex-wrap: nowrap;
     }
 }
 

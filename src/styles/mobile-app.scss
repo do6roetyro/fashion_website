@@ -5,12 +5,9 @@
     background-color: variables.$color-bg;
 
     width: 373.2px;
-    // width: clamp(calc(373.2px / 1.8), calc((373.2 / 1920) * 100vw), 373.2px);
     height: 710px;
-    // height: clamp(calc(710px / 1.8), calc((710 / 1920) * 100vw), 710px);
-
+  
     border-radius: 50px;
-    // border: clamp(10px, 1.5vw, 22.58px) solid #c2c8da;
     border: 22.58px solid #c2c8da;
 
     box-shadow: 0px 4px 63px 0px rgba(0, 0, 0, 0.25);
@@ -25,10 +22,6 @@
 
     @media (width <= 1450px) {
         transform: scale(0.65);
-    }
-
-    @media (width <= 850px) {
-        transform: scale(0.55);
     }
 }
 

@@ -34,6 +34,7 @@
     border: none;
 
     padding: clamp(16px, calc((30 / 1920) * 100vw), 27px);
+    padding-right: 30%;
 
     &::placeholder {
         color: #767676;
@@ -47,6 +48,10 @@
 
     @media (width <= variables.$screen-tablet-small) {
         width: clamp(300px, calc((574 / 1024) * 100vw), 574px);
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        width: 240px;
     }
 }
 
@@ -67,4 +72,15 @@
     line-height: clamp(16px, 2vw, 35px);
     letter-spacing: 0.99px;
     text-transform: uppercase;
+
+    @media (width <= variables.$screen-tablet-small) {
+        padding: 0;
+        &::before {
+            @include mixins.pseudo("../icons/arrow_send.svg", 52px, 52px);
+            position: absolute;
+            right: 0;
+            top: -26px;
+            background-size: contain;
+        }
+    }
 }

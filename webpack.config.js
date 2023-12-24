@@ -1,10 +1,11 @@
+/* global __dirname */
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-
 
 module.exports = {
   mode: "development", // или 'production'
@@ -18,7 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: "babel-loader",
+        use: ["babel-loader", "eslint-loader"],
         exclude: /node_modules/,
       },
       {
@@ -61,10 +62,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.join(__dirname, 'src/images'),
-          to: path.join(__dirname, 'dist/images')
-        }
-      ]
+          from: path.join(__dirname, "src/images"),
+          to: path.join(__dirname, "dist/images"),
+        },
+      ],
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.pug"), // ваш шаблон HTML

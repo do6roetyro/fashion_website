@@ -2,11 +2,15 @@
 @use "mixins.scss";
 
 .download__wrapper {
-    padding-bottom: clamp(60px, calc((200 / 1920) * 100vw), 200px);
+    padding-bottom: clamp(90px, calc((200 / 1920) * 100vw), 200px);
 }
 
 .download__container {
     padding: 0 clamp(56px, calc((119 / 1920) * 100vw), 119px);
+
+    @media (width <= variables.$screen-tablet-small) {
+        padding: 0;
+    }
 }
 
 .download__title {
@@ -16,16 +20,33 @@
     line-height: 150%;
     letter-spacing: clamp(1.88px, 2vw, 2.88px);
     text-transform: uppercase;
+
+    @media (width <= variables.$screen-tablet-small) {
+        padding-bottom: 12px;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        padding-bottom: 12px;
+    }
 }
 
 .download__description {
     color: #7c7c7c;
-    font-size: clamp(8px, 1.5vw, 24px);
+    font-size: clamp(12px, 1.5vw, 24px);
     font-weight: 500;
     line-height: clamp(10px, 2.5vw, 35px);
     letter-spacing: -0.96px;
 
     padding-bottom: clamp(32px, calc((65 / 1920) * 100vw), 65px);
+
+    @media (width <= variables.$screen-tablet-small) {
+        letter-spacing: normal;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 
 .download__image {
@@ -86,6 +107,10 @@
         @include mixins.mobile-round(637, 629);
         border: 2.5px solid #efeceb;
     }
+
+    @media (width <= variables.$screen-tablet-small) {
+        display: none;
+    }
 }
 
 .download__cirle {
@@ -104,7 +129,6 @@
     &--2 {
         background-color: #ebd96b;
         @include mixins.star(34, 34, auto, auto, 15, 90);
-        
     }
 
     &--3 {

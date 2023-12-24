@@ -101,11 +101,6 @@
     @media (width <= 500px) {
         display: none;
 
-        // margin: 0 auto;
-        // padding: 0;
-
-        // text-align: start;
-
         width: 100%;
         height: fit-content;
 
@@ -185,8 +180,12 @@
     white-space: nowrap;
 
     @media (width <= variables.$screen-tablet-large) {
-        font-size: clamp(16px, 2vw, 24px);
+        font-size: clamp(12px, 2vw, 24px);
         height: fit-content;
+    }
+
+    @media (width <= variables.$screen-mobile) {
+        padding: 5px;
     }
 }
 

@@ -25,6 +25,11 @@
     letter-spacing: 0.48px;
 
     padding-bottom: clamp(16px, calc((32 / 1920) * 100vw), 32px);
+
+    @media (width <= variables.$screen-mobile) {
+        font-size: clamp(10px, 1.5vw, 24px);
+        line-height: clamp(20px, 1.5vw, 40px);
+    }
 }
 
 .footer-navigation__list {
@@ -43,6 +48,12 @@
     align-items: flex-start;
 
     position: relative;
+
+    @media (width <= variables.$screen-mobile) {
+        font-size: clamp(10px, 1.5vw, 24px);
+        line-height: clamp(20px, 1.5vw, 40px);
+        gap: 12px;
+    }
 }
 
 .footer-navigation__link {

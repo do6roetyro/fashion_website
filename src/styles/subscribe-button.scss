@@ -1,0 +1,8 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+.subscribe-button__text {
+    @media (width <= variables.$screen-tablet-small) {
+        display: none;
+    }
+}

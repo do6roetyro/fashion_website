@@ -3,6 +3,10 @@
 
 .download-container {
     display: flex;
+
+    @media (width <= variables.$screen-tablet-small) {
+        flex-direction: column;
+    }
 }
 
 .download-container__subject {
@@ -12,6 +16,10 @@
     justify-content: center;
     align-items: right;
     position: relative;
+
+    @media (width <= variables.$screen-tablet-small) {
+        margin-bottom: 32px;
+    }
 }
 
 .download-container__image {
@@ -22,6 +30,12 @@
     position: relative;
 
     height: clamp(400px, calc((711 / 1920) * 100vw), 711px);
+
+    @media (width <= variables.$screen-tablet-small) {
+        flex-basis: auto;
+        align-self: center;
+        justify-content: center;
+    }
 }
 
 .download-container__links {

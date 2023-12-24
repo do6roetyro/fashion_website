@@ -22,6 +22,7 @@ import "./styles/download.scss";
 import "./styles/download-container.scss";
 import "./styles/subscribe.scss";
 import "./styles/subscribe-form.scss";
+import "./styles/subscribe-button.scss";
 //-- mobile_app
 import "./styles/mobile-app.scss";
 import "./styles/mobile-item.scss";

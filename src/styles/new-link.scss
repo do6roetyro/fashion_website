@@ -9,6 +9,12 @@
     max-height: 704px;
 
 
+    @media (width <= 500px) {
+        height: auto;
+        max-height: none;
+     }
+
+
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             transform: scale(1.03);
@@ -24,11 +30,6 @@
 
 .new-link__image {
     height: 100%;
-
-    // @media (width <= variables.$screen-tablet-large) {
-    //     object-fit: cover;
-    //     border-radius: 12px;
-    // }
 }
 
 .new-link__container {
