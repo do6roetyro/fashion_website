@@ -6,6 +6,7 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 
 module.exports = {
   mode: "development", // или 'production'
@@ -44,6 +45,31 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
+        use: [
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+              },
+              optipng: {
+                optimizationLevel: 5,
+              },
+              pngquant: {
+                quality: [0.8, 0.9],
+              },
+              gifsicle: {
+                interlaced: true,
+              },
+            },
+          },
+          {
+            loader: "imagemin-webp",
+            options: {
+              quality: 75,
+            },
+          },
+        ],
         type: "asset/resource",
         generator: {
           filename: "images/[name].[contenthash][ext]",
@@ -109,6 +135,17 @@ module.exports = {
           },
         },
       }),
+      new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(png|jpg|jpeg|gif)$/i,
+          options: {
+            quality: 75,
+          },
+        },
+      ],
+      overrideExtension: true,
+    }),
     ],
   },
 };
