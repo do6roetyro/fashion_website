@@ -30,7 +30,9 @@ Fashion Landing Page - это проект, разработанный для и
 ## Скриншоты
 
 ![Desktop](./src/images/screenshot_desktop.jpg)
+
 ![Mobile](./src/images/screenshot_mobile.jpg)
+
 ![Mobile](./src/images/screenshot_mobile1.jpg)
 
 ## Авторы
