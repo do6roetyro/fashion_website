@@ -91,6 +91,10 @@ module.exports = {
           from: path.join(__dirname, "src/images"),
           to: path.join(__dirname, "dist/images"),
         },
+        {
+          from: path.join(__dirname, "src/images"),
+          to: path.join(__dirname, "src/images"),
+        },
       ],
     }),
     new HtmlWebpackPlugin({
